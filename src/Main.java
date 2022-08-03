@@ -116,12 +116,12 @@ public class Main {
 			}
 		}
 		
-		System.out.println(spellDuplicates);
-		
 		System.out.println();
 		for (int i = 0; i < spellCombos.size(); i++) {
 			System.out.println("Spell #" + (i + 1) + ": " + spellCombos.get(i));
 		}
+		
+		spellCombos.clear();
 		
 		return yesNo("\nRestart? ");
 	}
@@ -132,13 +132,6 @@ public class Main {
 				spellDamage.add(spells[(int) (Math.random() * spells.length)]);
 				
 				health += spellDamage.get(j);
-				
-//				for (int k = 0; k < spellCount; k++) {
-//					if (spellDamage.get(j % ) == spells[]) {  // rocket: add spelldamage; spelldamage % 1484  ; spelldamage / 1484; spell = 1484
-//						spellDuplicates.set(k, j + k);
-//						spellDamage.remove(j);
-//					}
-//				}
 				
 				if (initialHealth - health == finalHealth) {	
 					Collections.sort(spellDamage);
